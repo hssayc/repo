@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peppa Pig</title>
+    <title>Peppa Pig Video List</title>
     <style>
         @font-face {
             font-family: 'PeppaPigFont';
@@ -24,114 +24,49 @@
             background-image: url('https://raw.githubusercontent.com/hssayc/repo/main/background1.jpg');
             background-size: cover;
             background-position: center;
-            overflow: hidden; /* 스크롤바 숨기기 */
+            overflow: hidden;
         }
         h1 {
             font-family: 'PeppaPigFont', sans-serif;
             color: #ff66b2;
-            font-size: 28px; /* 전체 폰트 사이즈 조정 */
+            font-size: 28px;
             text-align: center;
+            margin: 20px;
+            z-index: 1;
+            position: relative;
+        }
+        .video-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .video-list li {
             margin: 10px 0;
-            z-index: 1;
-            position: relative;
-            animation: fadeIn 2s ease-in-out; /* 타이틀 애니메이션 추가 */
         }
-        .episode-number {
-            font-size: 20px; /* 'Episode 1:' 부분 폰트 사이즈 줄이기 */
-            display: block;
-        }
-        .video-container {
-            background-color: white;
-            padding: 20px; /* 패딩 증가 */
-            border-radius: 15px; /* 둥근 모서리 */
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 100%;
-            box-sizing: border-box;
-            z-index: 1;
-            position: relative;
-            animation: slideIn 1s ease-in-out; /* 비디오 컨테이너 애니메이션 추가 */
-        }
-        video {
-            width: 100%;
-            border-radius: 10px;
-            max-height: 80vh; /* 비디오 최대 높이 조정 */
-        }
-        .footer {
-            font-family: 'PeppaPigFont', sans-serif; /* footer 폰트 적용 */
-            font-size: 16px; /* 폰트 사이즈 증가 */
-            letter-spacing: 1px; /* 자간 조정 */
+        .video-list a {
+            font-family: 'PeppaPigFont', sans-serif;
             color: #ff66b2;
-            position: fixed; /* 화면 하단에 고정 */
-            bottom: 0;
-            left: 0;
-            text-align: center;
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.8); /* 투명도 조정 */
-            padding: 10px;
+            font-size: 24px;
+            text-decoration: none;
+            border: 2px solid #ff66b2;
             border-radius: 5px;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* 위쪽 그림자 */
-            animation: fadeIn 2s ease-in-out; /* footer 애니메이션 추가 */
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideIn {
-            from { transform: translateY(-20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+        .video-list a:hover {
+            background-color: #ff66b2;
+            color: #fff;
         }
     </style>
 </head>
 <body>
-    <div class="video-container">
-        <h1 id="video-title">
-            <span class="episode-number" id="episode-number"></span>
-            <span id="title-text"></span>
-        </h1>
-        <video id="video-player" autoplay preload="auto" playsinline controls>
-            <source id="video-source" type="video/mp4">
-            브라우저가 video 태그를 지원하지 않습니다.
-        </video>
-    </div>
-    <div class="footer">
-        for the World's Best Baby Yuchan
-    </div>
-
-    <script>
-        // 비디오 정보 배열
-        const videos = [
-            {
-                title: 'Muddy Puddles',
-                episode: 'Episode 1:',
-                src: 'https://raw.githubusercontent.com/hssayc/repo/main/Peppa%20Pig%20Season%201%20Episode%201%20-%20Muddy%20Puddles%20-%20Cartoons%20for%20Children%20(1080p%2C%20h264%2C%20youtube).mp4'
-            },
-            {
-                title: 'Mr Dinosaur is Lost',
-                episode: 'Episode 2:',
-                src: 'https://raw.githubusercontent.com/hssayc/repo/main/Peppa%20Pig%20Season%201%20Episode%202%20-%20Mr%20Dinosaur%20is%20Lost%20-%20Cartoons%20for%20Children%20(1080p%2C%20h264%2C%20youtube).mp4'
-            },
-            {
-                title: 'Best Friend',
-                episode: 'Episode 3:',
-                src: 'https://raw.githubusercontent.com/hssayc/repo/main/Peppa%20Pig%20Season%201%20Episode%203%20-%20Best%20Friend%20-%20Cartoons%20for%20Children%20(1080p%2C%20h264%2C%20youtube).mp4'
-            },
-            {
-                title: 'Polly Parrot',
-                episode: 'Episode 4:',
-                src: 'https://raw.githubusercontent.com/hssayc/repo/main/Peppa%20Pig%20Season%201%20Episode%204%20-%20Polly%20Parrot%20-%20Cartoons%20for%20Children%20(1080p%2C%20h264%2C%20youtube).mp4'
-            }
-        ];
-
-        // URL 파라미터에서 에피소드 번호를 가져오기
-        const params = new URLSearchParams(window.location.search);
-        const episodeIndex = parseInt(params.get('episode')) - 1 || 0;
-
-        // 비디오 정보 설정
-        const video = videos[episodeIndex] || videos[0];
-        document.getElementById('episode-number').innerText = video.episode;
-        document.getElementById('title-text').innerText = video.title;
-        document.getElementById('video-source').src = video.src;
-    </script>
+    <h1>Peppa Pig Video List</h1>
+    <ul class="video-list">
+        <li><a href="https://hssayc.github.io/repo/video1.html">Episode 1: Muddy Puddles</a></li>
+        <li><a href="https://hssayc.github.io/repo/video2.html">Episode 2: Mr Dinosaur is Lost</a></li>
+        <li><a href="https://hssayc.github.io/repo/video3.html">Episode 3: Best Friend</a></li>
+        <li><a href="https://hssayc.github.io/repo/video4.html">Episode 4: Polly Parrot</a></li>
+    </ul>
 </body>
 </html>
