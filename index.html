@@ -22,7 +22,7 @@
             background-image: url('https://raw.githubusercontent.com/hssayc/repo/main/background1.jpg');
             background-size: cover;
             background-position: center;
-            overflow: hidden;
+            overflow-x: hidden; /* 수평 스크롤 방지 */
         }
         header {
             background: rgba(255, 255, 255, 0.8);
@@ -43,6 +43,7 @@
             justify-content: center;
             align-items: center;
             padding: 20px;
+            overflow-y: auto; /* 수직 스크롤 허용 */
         }
         .video-list {
             list-style-type: none;
@@ -51,36 +52,36 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 15px; /* 간격 조절 */
         }
         .video-list li {
             background: rgba(255, 255, 255, 0.9);
             border: 2px solid #ff66b2;
             border-radius: 10px;
-            padding: 15px;
+            padding: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            width: 250px;
-            height: 120px; /* 고정 높이 */
+            width: 120px; /* 박스 너비 조정 */
+            height: 60px; /* 박스 높이 조정 */
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             font-family: 'PeppaPigFont', sans-serif;
-            overflow: hidden; /* 텍스트가 박스를 넘지 않도록 */
+            overflow: hidden;
         }
         .video-list a {
             color: #ff66b2;
             text-decoration: none;
-            font-size: 16px; /* 폰트 크기 조절 */
+            font-size: 14px; /* 폰트 크기 조절 */
             display: block;
-            line-height: 1.4; /* 텍스트의 줄 높이 조절 */
+            line-height: 1.2; /* 줄 높이 조절 */
             overflow: hidden;
-            text-overflow: ellipsis; /* 텍스트가 박스를 넘으면 생략 표시 */
+            text-overflow: ellipsis; /* 생략 표시 */
         }
         .video-list a:hover {
             color: #fff;
             background-color: #ff66b2;
-            padding: 10px;
+            padding: 5px;
             border-radius: 5px;
         }
         footer {
