@@ -18,55 +18,96 @@
             padding: 0;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             background-image: url('https://raw.githubusercontent.com/hssayc/repo/main/background1.jpg');
             background-size: cover;
             background-position: center;
             overflow: hidden;
         }
+        header {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
         h1 {
             font-family: 'PeppaPigFont', sans-serif;
             color: #ff66b2;
             font-size: 28px;
-            text-align: center;
-            margin: 20px;
-            z-index: 1;
-            position: relative;
+            margin: 0;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
         }
         .video-list {
             list-style-type: none;
             padding: 0;
             margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
         .video-list li {
-            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid #ff66b2;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            height: 120px; /* 고정 높이 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: 'PeppaPigFont', sans-serif;
+            overflow: hidden; /* 텍스트가 박스를 넘지 않도록 */
         }
         .video-list a {
-            font-family: 'PeppaPigFont', sans-serif;
             color: #ff66b2;
-            font-size: 24px;
             text-decoration: none;
-            border: 2px solid #ff66b2;
-            border-radius: 5px;
-            padding: 10px 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 16px; /* 폰트 크기 조절 */
+            display: block;
+            line-height: 1.4; /* 텍스트의 줄 높이 조절 */
+            overflow: hidden;
+            text-overflow: ellipsis; /* 텍스트가 박스를 넘으면 생략 표시 */
         }
         .video-list a:hover {
-            background-color: #ff66b2;
             color: #fff;
+            background-color: #ff66b2;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        footer {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            text-align: center;
+            font-family: 'PeppaPigFont', sans-serif;
+            color: #ff66b2;
+            border-top: 2px solid #ff66b2;
+            position: relative;
         }
     </style>
 </head>
 <body>
-    <h1>Peppa Pig Video List</h1>
-    <ul class="video-list">
-        <li><a href="https://hssayc.github.io/repo/video1.html">Episode 1: Muddy Puddles</a></li>
-        <li><a href="https://hssayc.github.io/repo/video2.html">Episode 2: Mr Dinosaur is Lost</a></li>
-        <li><a href="https://hssayc.github.io/repo/video3.html">Episode 3: Best Friend</a></li>
-        <li><a href="https://hssayc.github.io/repo/video4.html">Episode 4: Polly Parrot</a></li>
-    </ul>
+    <header>
+        <h1>Peppa Pig Video List</h1>
+    </header>
+    <main>
+        <ul class="video-list">
+            <li><a href="https://hssayc.github.io/repo/video1.html">Episode 1: Muddy Puddles</a></li>
+            <li><a href="https://hssayc.github.io/repo/video2.html">Episode 2: Mr Dinosaur is Lost</a></li>
+            <li><a href="https://hssayc.github.io/repo/video3.html">Episode 3: Best Friend</a></li>
+            <li><a href="https://hssayc.github.io/repo/video4.html">Episode 4: Polly Parrot</a></li>
+        </ul>
+    </main>
+    <footer>
+        <p>For the World's Best Baby Yuchan</p>
+    </footer>
 </body>
 </html>
