@@ -59,14 +59,15 @@
             font-size: 16px; /* 폰트 사이즈 증가 */
             letter-spacing: 1px; /* 자간 조정 */
             color: #ff66b2;
-            position: absolute;
-            bottom: 10px;
+            position: fixed; /* 화면 하단에 고정 */
+            bottom: 0;
+            left: 0;
             text-align: center;
             width: 100%;
-            z-index: 1;
             background-color: rgba(255, 255, 255, 0.8); /* 투명도 조정 */
             padding: 10px;
             border-radius: 5px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* 위쪽 그림자 */
         }
     </style>
 </head>
