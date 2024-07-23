@@ -125,7 +125,7 @@
 
         // URL 파라미터에서 에피소드 번호를 가져오기
         const params = new URLSearchParams(window.location.search);
-        const episodeIndex = parseInt(params.get('episode')) || 0;
+        const episodeIndex = parseInt(params.get('episode')) - 1 || 0;
 
         // 비디오 정보 설정
         const video = videos[episodeIndex] || videos[0];
