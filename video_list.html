@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peppa Pig Video List</title>
+    <style>
+        @font-face {
+            font-family: 'PeppaPigFont';
+            src: url('https://raw.githubusercontent.com/hssayc/repo/main/peppa-pig-font.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url('https://raw.githubusercontent.com/hssayc/repo/main/background1.jpg');
+            background-size: cover;
+            background-position: center;
+            overflow: hidden; /* 스크롤바 숨기기 */
+        }
+        h1 {
+            font-family: 'PeppaPigFont', sans-serif;
+            color: #ff66b2;
+            font-size: 28px; /* 전체 폰트 사이즈 조정 */
+            text-align: center;
+            margin: 10px 0;
+            z-index: 1;
+            position: relative;
+            animation: fadeIn 2s ease-in-out; /* 타이틀 애니메이션 추가 */
+        }
+        .video-list {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            box-sizing: border-box;
+            z-index: 1;
+            position: relative;
+            animation: slideIn 1s ease-in-out; /* 비디오 리스트 애니메이션 추가 */
+        }
+        .video-list a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            font-family: 'PeppaPigFont', sans-serif; /* 비디오 리스트 링크 폰트 적용 */
+            color: #ff66b2;
+            font-size: 20px;
+            text-align: center;
+            border: 2px solid #ff66b2;
+            border-radius: 10px;
+            padding: 10px;
+            transition: background-color 0.3s, color 0.3s; /* 호버 효과 추가 */
+        }
+        .video-list a:hover {
+            background-color: #ff66b2;
+            color: white;
+        }
+        .footer {
+            font-family: 'PeppaPigFont', sans-serif;
+            font-size: 16px; /* 폰트 사이즈 증가 */
+            letter-spacing: 1px; /* 자간 조정 */
+            color: #ff66b2;
+            position: fixed; /* 화면 하단에 고정 */
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.8); /* 투명도 조정 */
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* 위쪽 그림자 */
+            animation: fadeIn 2s ease-in-out; /* footer 애니메이션 추가 */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Peppa Pig Videos</h1>
+    <div class="video-list">
+        <a href="https://raw.githubusercontent.com/hssayc/repo/main/index.html?episode=1" target="_blank">Episode 1: Muddy Puddles</a>
+        <a href="https://raw.githubusercontent.com/hssayc/repo/main/index.html?episode=2" target="_blank">Episode 2: Mr Dinosaur is Lost</a>
+        <a href="https://raw.githubusercontent.com/hssayc/repo/main/index.html?episode=3" target="_blank">Episode 3: Best Friend</a>
+        <a href="https://raw.githubusercontent.com/hssayc/repo/main/index.html?episode=4" target="_blank">Episode 4: Polly Parrot</a>
+    </div>
+    <div class="footer">
+        for the World's Best Baby Yuchan
+    </div>
+</body>
+</html>
