@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peppa Pig - Episode 1</title>
+    <title>Peppa Pig</title>
     <style>
         @font-face {
             font-family: 'PeppaPigFont';
@@ -85,17 +85,53 @@
 </head>
 <body>
     <div class="video-container">
-        <h1>
-            <span class="episode-number">Episode 1:</span>
-            Muddy Puddles
+        <h1 id="video-title">
+            <span class="episode-number" id="episode-number"></span>
+            <span id="title-text"></span>
         </h1>
-        <video autoplay preload="auto" playsinline controls>
-            <source src="https://raw.githubusercontent.com/hssayc/repo/main/Peppa%20Pig%20Season%201%20Episode%201%20-%20Muddy%20Puddles%20-%20Cartoons%20for%20Children%20(1080p%2C%20h264%2C%20youtube).mp4" type="video/mp4">
+        <video id="video-player" autoplay preload="auto" playsinline controls>
+            <source id="video-source" type="video/mp4">
             브라우저가 video 태그를 지원하지 않습니다.
         </video>
     </div>
     <div class="footer">
         for the World's Best Baby Yuchan
     </div>
+
+    <script>
+        // 비디오 정보 배열
+        const videos = [
+            {
+                title: 'Muddy Puddles',
+                episode: 'Episode 1:',
+                src: 'https://raw.githubusercontent.com/hssayc/repo/main/Peppa%20Pig%20Season%201%20Episode%201%20-%20Muddy%20Puddles%20-%20Cartoons%20for%20Children%20(1080p%2C%20h264%2C%20youtube).mp4'
+            },
+            {
+                title: 'Mr Dinosaur is Lost',
+                episode: 'Episode 2:',
+                src: 'https://raw.githubusercontent.com/hssayc/repo/main/Peppa%20Pig%20Season%201%20Episode%202%20-%20Mr%20Dinosaur%20is%20Lost%20-%20Cartoons%20for%20Children%20(1080p%2C%20h264%2C%20youtube).mp4'
+            },
+            {
+                title: 'Best Friend',
+                episode: 'Episode 3:',
+                src: 'https://raw.githubusercontent.com/hssayc/repo/main/Peppa%20Pig%20Season%201%20Episode%203%20-%20Best%20Friend%20-%20Cartoons%20for%20Children%20(1080p%2C%20h264%2C%20youtube).mp4'
+            },
+            {
+                title: 'Polly Parrot',
+                episode: 'Episode 4:',
+                src: 'https://raw.githubusercontent.com/hssayc/repo/main/Peppa%20Pig%20Season%201%20Episode%204%20-%20Polly%20Parrot%20-%20Cartoons%20for%20Children%20(1080p%2C%20h264%2C%20youtube).mp4'
+            }
+        ];
+
+        // URL 파라미터에서 에피소드 번호를 가져오기
+        const params = new URLSearchParams(window.location.search);
+        const episodeIndex = parseInt(params.get('episode')) || 0;
+
+        // 비디오 정보 설정
+        const video = videos[episodeIndex] || videos[0];
+        document.getElementById('episode-number').innerText = video.episode;
+        document.getElementById('title-text').innerText = video.title;
+        document.getElementById('video-source').src = video.src;
+    </script>
 </body>
 </html>
