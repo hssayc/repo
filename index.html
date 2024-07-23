@@ -8,38 +8,66 @@
         body {
             font-family: 'Comic Sans MS', sans-serif;
             background-color: #f9f9f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
+            padding: 0;
+            display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url('https://raw.githubusercontent.com/hssayc/repo/main/background1.jpg'); /* 배경 이미지 URL */
+            background-size: cover;
+            background-position: center;
         }
         h1 {
             color: #ff66b2;
+            font-size: 24px;
+            text-align: center;
+            margin: 10px 0;
             font-family: 'Comic Sans MS', sans-serif;
+            z-index: 1;
+            position: relative;
         }
         .video-container {
             background-color: white;
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            z-index: 1;
+            position: relative;
         }
         video {
             width: 100%;
-            max-width: 640px;
             border-radius: 10px;
+            max-height: 80vh; /* Ensure video does not exceed the viewport height */
+        }
+        .footer {
+            font-size: 14px;
+            color: #ff66b2;
+            position: absolute;
+            bottom: 10px;
+            text-align: center;
+            width: 100%;
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
     <div class="video-container">
-        <h1>Peppa Pig - Episode 1 : Muddy Puddles</h1>
+        <h1>Episode 1: Muddy Puddles</h1>
         <video autoplay preload="auto" playsinline controls>
-            <source src="https://raw.githubusercontent.com/hssayc/repo/ae4155dbb6b9121abb03e5da2b451f111c247534/Peppa%20Pig%20Season%201%20Episode%201%20-%20Muddy%20Puddles%20-%20Cartoons%20for%20Children%20(1080p%2C%20h264%2C%20youtube).mp4" type="video/mp4">
+            <source src="https://raw.githubusercontent.com/hssayc/repo/main/Peppa%20Pig%20Season%201%20Episode%201%20-%20Muddy%20Puddles%20-%20Cartoons%20for%20Children%20(1080p%2C%20h264%2C%20youtube).mp4" type="video/mp4">
             브라우저가 video 태그를 지원하지 않습니다.
         </video>
+    </div>
+    <div class="footer">
+        for the World's Best Baby Yuchan
     </div>
 </body>
 </html>
