@@ -23,9 +23,11 @@
             background-size: cover;
             background-position: center;
             overflow-x: hidden; /* 수평 스크롤 방지 */
+            overflow-y: auto; /* 수직 스크롤 허용 */
+            text-align: center; /* 중앙 정렬 */
         }
         header {
-            background: rgba(255, 255, 255, 0.8);
+            background: linear-gradient(to right, #a8e0d8, #7ec8e3); /* 민트색과 하늘색의 그라데이션 */
             padding: 20px;
             text-align: center;
             position: relative;
@@ -33,80 +35,98 @@
         }
         h1 {
             font-family: 'PeppaPigFont', sans-serif;
-            color: #ff66b2;
-            font-size: 28px;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4, #fbc2eb, #e6dee9); /* 무지개색 그라데이션 */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 32px; /* 제목 크기 조정 */
             margin: 0;
         }
-        main {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .section-title {
+            font-family: 'PeppaPigFont', sans-serif;
+            color: #ff66b2; /* 분홍색 글자 */
+            font-size: 24px; /* 소제목 크기 조정 */
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 8px; /* 테두리 둥글게 */
+            display: inline-block;
+        }
+        .video-list-container {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
             padding: 20px;
-            overflow-y: auto; /* 수직 스크롤 허용 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .video-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px; /* 간격 조절 */
+            gap: 20px; /* 박스 간격 */
+            padding: 0; /* 페이지 좌우 여백 제거 */
+            margin: 0; /* 상하 여백 제거 */
         }
-        .video-list li {
+        .video-item {
             background: rgba(255, 255, 255, 0.9);
             border: 2px solid #ff66b2;
             border-radius: 10px;
             padding: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            width: 120px; /* 박스 너비 조정 */
-            height: 60px; /* 박스 높이 조정 */
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 220px; /* 박스 너비 */
             text-align: center;
-            font-family: 'PeppaPigFont', sans-serif;
-            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px; /* 박스 하단 여백 */
         }
-        .video-list a {
-            color: #ff66b2;
+        .video-item a {
             text-decoration: none;
-            font-size: 14px; /* 폰트 크기 조절 */
-            display: block;
-            line-height: 1.2; /* 줄 높이 조절 */
-            overflow: hidden;
-            text-overflow: ellipsis; /* 생략 표시 */
+            color: #ff66b2;
+            font-family: 'PeppaPigFont', sans-serif;
+            font-size: 18px; /* 링크 텍스트 크기 조정 */
+            display: block; /* 줄 바꿈을 위한 블록 요소 */
         }
-        .video-list a:hover {
-            color: #fff;
-            background-color: #ff66b2;
-            padding: 5px;
-            border-radius: 5px;
+        .video-item a:hover {
+            text-decoration: underline;
         }
         footer {
-            background: rgba(255, 255, 255, 0.8);
+            background: linear-gradient(to right, #a8e0d8, #7ec8e3); /* 민트색과 하늘색의 그라데이션 */
             padding: 10px;
             text-align: center;
             font-family: 'PeppaPigFont', sans-serif;
-            color: #ff66b2;
+            color: #fff; /* 글자색 흰색 */
             border-top: 2px solid #ff66b2;
             position: relative;
+            margin-top: auto; /* footer를 페이지 하단으로 고정 */
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Peppa Pig Video List</h1>
+        <h1>Yuchan's Favorite Video</h1>
     </header>
-    <main>
-        <ul class="video-list">
-            <li><a href="https://hssayc.github.io/repo/video1.html">Episode 1: Muddy Puddles</a></li>
-            <li><a href="https://hssayc.github.io/repo/video2.html">Episode 2: Mr Dinosaur is Lost</a></li>
-            <li><a href="https://hssayc.github.io/repo/video3.html">Episode 3: Best Friend</a></li>
-            <li><a href="https://hssayc.github.io/repo/video4.html">Episode 4: Polly Parrot</a></li>
-        </ul>
-    </main>
+    <div class="section-title">
+        Peppa Pig Video List
+    </div>
+    <div class="video-list-container">
+        <div class="video-list">
+            <div class="video-item">
+                <a href="https://hssayc.github.io/repo/video1.html">
+                    Episode 1:<br>Muddy Puddles
+                </a>
+            </div>
+            <div class="video-item">
+                <a href="https://hssayc.github.io/repo/video2.html">
+                    Episode 2:<br>Mr Dinosaur is Lost
+                </a>
+            </div>
+            <div class="video-item">
+                <a href="https://hssayc.github.io/repo/video3.html">
+                    Episode 3:<br>Best Friend
+                </a>
+            </div>
+            <div class="video-item">
+                <a href="https://hssayc.github.io/repo/video4.html">
+                    Episode 4:<br>Polly Parrot
+                </a>
+            </div>
+        </div>
+    </div>
     <footer>
         <p>For the World's Best Baby Yuchan</p>
     </footer>
