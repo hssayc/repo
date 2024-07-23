@@ -3,106 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuchan's<br>Favorite Videos</title>
+    <title>Yuchan's Favorite Videos</title>
     <style>
-        @font-face {
-            font-family: 'PeppaPigFont';
-            src: url('https://raw.githubusercontent.com/hssayc/repo/main/peppa-pig-font.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
         body {
-            font-family: 'Comic Sans MS', sans-serif;
-            background-color: #f9f9f9;
+            font-family: 'Peppa Pig', sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
             background-image: url('https://raw.githubusercontent.com/hssayc/repo/main/background1.jpg');
             background-size: cover;
             background-position: center;
-            overflow-x: hidden; /* 수평 스크롤 방지 */
-            overflow-y: auto; /* 수직 스크롤 허용 */
-            text-align: center; /* 중앙 정렬 */
         }
         header {
-            background: rgba(168, 224, 216, 0.9); /* 민트색에 투명도 적용 */
-            padding: 40px 20px;
+            background: rgba(0, 255, 255, 0.8);
             text-align: center;
+            padding: 20px;
+            color: white;
             position: relative;
-            width: 100%;
             z-index: 1;
-            border-radius: 0 0 20px 20px; /* 둥글게 처리 */
-            margin: 0;
+            border-bottom: 10px solid rgba(0, 255, 255, 0.8);
         }
-        h1 {
-            font-family: 'PeppaPigFont', sans-serif;
-            background: linear-gradient(to right, #ff9a9e, #fad0c4, #fbc2eb, #e6dee9); /* 무지개색 그라데이션 */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 36px; /* 제목 크기 조정 */
+        header h1 {
             margin: 0;
+            font-size: 2.5em;
+            line-height: 1.2;
         }
         .section-title {
-            font-family: 'PeppaPigFont', sans-serif;
-            color: #ff66b2; /* 분홍색 글자 */
-            font-size: 24px; /* 소제목 크기 조정 */
+            background: linear-gradient(135deg, #ff69b4, #ffb6c1);
             padding: 10px;
-            margin: 20px auto;
-            display: inline-block;
+            text-align: center;
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            border-radius: 5px;
+            margin: 20px 0;
+            position: relative;
         }
         .video-list-container {
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin: 0 auto;
-            max-width: 90%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0 10px;
         }
         .video-list {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px; /* 박스 간격 */
-            padding: 0; /* 페이지 좌우 여백 제거 */
-            margin: 0; /* 상하 여백 제거 */
+            flex-direction: column;
+            align-items: center;
         }
         .video-item {
             background: rgba(255, 255, 255, 0.9);
-            border: 2px solid #ff66b2;
+            border: 2px solid #ff69b4;
             border-radius: 10px;
-            padding: 10px;
-            width: 220px; /* 박스 너비 */
+            margin: 10px;
+            padding: 15px;
+            width: 280px;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin-bottom: 20px; /* 박스 하단 여백 */
         }
         .video-item a {
             text-decoration: none;
-            color: #ff66b2;
-            font-family: 'PeppaPigFont', sans-serif;
-            font-size: 18px; /* 링크 텍스트 크기 조정 */
-            display: block; /* 줄 바꿈을 위한 블록 요소 */
-        }
-        .video-item a:hover {
-            text-decoration: underline;
+            color: #333;
+            font-size: 1.2em;
+            line-height: 1.5;
         }
         footer {
-            background: rgba(168, 224, 216, 0.9); /* 민트색에 투명도 적용 */
-            padding: 10px;
+            background: rgba(0, 255, 255, 0.6);
+            color: #333;
             text-align: center;
-            font-family: 'PeppaPigFont', sans-serif;
-            color: #fff; /* 글자색 흰색 */
-            border-top: 2px solid #ff66b2;
+            padding: 10px;
             position: relative;
-            margin-top: auto; /* footer를 페이지 하단으로 고정 */
+            z-index: 1;
+        }
+        footer p {
+            margin: 0;
+            font-size: 1.2em;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Yuchan's Favorite Video</h1>
+        <h1>Yuchan's<br>Favorite Videos</h1>
     </header>
     <div class="section-title">
         Peppa Pig Video List
