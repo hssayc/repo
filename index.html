@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peppa Pig - Episode 1</title>
     <style>
+        @font-face {
+            font-family: 'PeppaPigFont';
+            src: url('https://raw.githubusercontent.com/hssayc/repo/main/peppa-pig-font.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
         body {
             font-family: 'Comic Sans MS', sans-serif;
             background-color: #f9f9f9;
@@ -20,19 +26,19 @@
             background-position: center;
         }
         h1 {
+            font-family: 'PeppaPigFont', sans-serif;
             color: #ff66b2;
             font-size: 24px;
             text-align: center;
             margin: 10px 0;
-            font-family: 'Comic Sans MS', sans-serif;
             z-index: 1;
             position: relative;
         }
         .video-container {
             background-color: white;
             padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px; /* 더 세련된 느낌을 주기 위해 border-radius를 조정합니다. */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 100%;
             box-sizing: border-box;
@@ -52,8 +58,8 @@
             text-align: center;
             width: 100%;
             z-index: 1;
-            background-color: rgba(255, 255, 255, 0.7);
-            padding: 5px;
+            background-color: rgba(255, 255, 255, 0.8); /* 투명도 조정 */
+            padding: 10px;
             border-radius: 5px;
         }
     </style>
