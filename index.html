@@ -27,18 +27,21 @@
             text-align: center; /* 중앙 정렬 */
         }
         header {
-            background: linear-gradient(to right, #a8e0d8, #7ec8e3); /* 민트색과 하늘색의 그라데이션 */
-            padding: 20px;
+            background: rgba(168, 224, 216, 0.9); /* 민트색에 투명도 적용 */
+            padding: 40px 20px;
             text-align: center;
             position: relative;
+            width: 100%;
             z-index: 1;
+            border-radius: 0 0 20px 20px; /* 둥글게 처리 */
+            margin: 0;
         }
         h1 {
             font-family: 'PeppaPigFont', sans-serif;
             background: linear-gradient(to right, #ff9a9e, #fad0c4, #fbc2eb, #e6dee9); /* 무지개색 그라데이션 */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-size: 32px; /* 제목 크기 조정 */
+            font-size: 36px; /* 제목 크기 조정 */
             margin: 0;
         }
         .section-title {
@@ -46,8 +49,7 @@
             color: #ff66b2; /* 분홍색 글자 */
             font-size: 24px; /* 소제목 크기 조정 */
             padding: 10px;
-            margin: 20px 0;
-            border-radius: 8px; /* 테두리 둥글게 */
+            margin: 20px auto;
             display: inline-block;
         }
         .video-list-container {
@@ -55,6 +57,8 @@
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+            max-width: 90%;
         }
         .video-list {
             display: flex;
@@ -85,7 +89,7 @@
             text-decoration: underline;
         }
         footer {
-            background: linear-gradient(to right, #a8e0d8, #7ec8e3); /* 민트색과 하늘색의 그라데이션 */
+            background: rgba(168, 224, 216, 0.9); /* 민트색에 투명도 적용 */
             padding: 10px;
             text-align: center;
             font-family: 'PeppaPigFont', sans-serif;
