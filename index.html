@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuchan's Favorite Video</title>
+    <title>Yuchan's Favorite Videos</title>
     <style>
         @font-face {
             font-family: 'PeppaPigFont';
@@ -32,6 +32,7 @@
             text-align: center;
             position: relative;
             z-index: 1;
+            border-bottom: 10px solid rgba(0, 255, 255, 0.8); /* 민트색과 하늘색 그라데이션 */
         }
         h1 {
             font-family: 'PeppaPigFont', sans-serif;
@@ -40,15 +41,14 @@
             -webkit-text-fill-color: transparent;
             font-size: 32px; /* 제목 크기 조정 */
             margin: 0;
+            line-height: 1.2; /* 줄 간격 조정 */
         }
         .section-title {
             font-family: 'PeppaPigFont', sans-serif;
-            background-color: #ff66b2; /* 분홍색 배경 */
-            color: #fff; /* 흰색 텍스트 */
+            color: #ff66b2; /* 분홍색 텍스트 */
             font-size: 24px; /* 소제목 크기 조정 */
             padding: 10px;
             margin: 20px 0;
-            border-radius: 8px; /* 테두리 둥글게 */
         }
         .video-list-container {
             background: rgba(255, 255, 255, 0.8);
@@ -79,6 +79,7 @@
             color: #ff66b2;
             font-family: 'PeppaPigFont', sans-serif;
             font-size: 18px; /* 링크 텍스트 크기 조정 */
+            display: block;
         }
         .video-item a:hover {
             text-decoration: underline;
@@ -97,7 +98,7 @@
 </head>
 <body>
     <header>
-        <h1>Yuchan's Favorite Video</h1>
+        <h1>Yuchan's<br>Favorite Videos</h1>
     </header>
     <div class="section-title">
         Peppa Pig Video List
@@ -105,16 +106,16 @@
     <div class="video-list-container">
         <div class="video-list">
             <div class="video-item">
-                <a href="https://hssayc.github.io/repo/video1.html">Episode 1: Muddy Puddles</a>
+                <a href="https://hssayc.github.io/repo/video1.html">Episode 1:<br>Muddy Puddles</a>
             </div>
             <div class="video-item">
-                <a href="https://hssayc.github.io/repo/video2.html">Episode 2: Mr Dinosaur is Lost</a>
+                <a href="https://hssayc.github.io/repo/video2.html">Episode 2:<br>Mr Dinosaur is Lost</a>
             </div>
             <div class="video-item">
-                <a href="https://hssayc.github.io/repo/video3.html">Episode 3: Best Friend</a>
+                <a href="https://hssayc.github.io/repo/video3.html">Episode 3:<br>Best Friend</a>
             </div>
             <div class="video-item">
-                <a href="https://hssayc.github.io/repo/video4.html">Episode 4: Polly Parrot</a>
+                <a href="https://hssayc.github.io/repo/video4.html">Episode 4:<br>Polly Parrot</a>
             </div>
         </div>
     </div>
