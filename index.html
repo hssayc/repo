@@ -28,12 +28,15 @@
         h1 {
             font-family: 'PeppaPigFont', sans-serif;
             color: #ff66b2;
-            font-size: 30px; /* 폰트 사이즈 증가 */
-            letter-spacing: 1px; /* 자간 조정 */
+            font-size: 28px; /* 전체 폰트 사이즈 조정 */
             text-align: center;
             margin: 10px 0;
             z-index: 1;
             position: relative;
+        }
+        .episode-number {
+            font-size: 20px; /* 'Episode 1:' 부분 폰트 사이즈 줄이기 */
+            display: block;
         }
         .video-container {
             background-color: white;
@@ -69,7 +72,10 @@
 </head>
 <body>
     <div class="video-container">
-        <h1>Episode 1: Muddy Puddles</h1>
+        <h1>
+            <span class="episode-number">Episode 1:</span>
+            Muddy Puddles
+        </h1>
         <video autoplay preload="auto" playsinline controls>
             <source src="https://raw.githubusercontent.com/hssayc/repo/main/Peppa%20Pig%20Season%201%20Episode%201%20-%20Muddy%20Puddles%20-%20Cartoons%20for%20Children%20(1080p%2C%20h264%2C%20youtube).mp4" type="video/mp4">
             브라우저가 video 태그를 지원하지 않습니다.
