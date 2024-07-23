@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peppa Pig Video List</title>
+    <title>Episode 2: Mr Dinosaur is Lost</title>
     <style>
         @font-face {
             font-family: 'PeppaPigFont';
@@ -35,33 +35,10 @@
             z-index: 1;
             position: relative;
         }
-        .video-list {
-            background-color: white;
-            padding: 20px;
+        video {
+            max-width: 90%;
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 600px;
-            box-sizing: border-box;
-            z-index: 1;
-            position: relative;
-        }
-        .video-list a {
-            display: block;
-            margin: 10px 0;
-            text-decoration: none;
-            font-family: 'PeppaPigFont', sans-serif;
-            color: #ff66b2;
-            font-size: 20px;
-            text-align: center;
-            border: 2px solid #ff66b2;
-            border-radius: 10px;
-            padding: 10px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .video-list a:hover {
-            background-color: #ff66b2;
-            color: white;
         }
         .footer {
             font-family: 'PeppaPigFont', sans-serif;
@@ -81,13 +58,11 @@
     </style>
 </head>
 <body>
-    <h1>Peppa Pig Videos</h1>
-    <div class="video-list">
-        <a href="https://raw.githubusercontent.com/hssayc/repo/main/video1.html" target="_blank">Episode 1: Muddy Puddles</a>
-        <a href="https://raw.githubusercontent.com/hssayc/repo/main/video2.html" target="_blank">Episode 2: Mr Dinosaur is Lost</a>
-        <a href="https://raw.githubusercontent.com/hssayc/repo/main/video3.html" target="_blank">Episode 3: Best Friend</a>
-        <a href="https://raw.githubusercontent.com/hssayc/repo/main/video4.html" target="_blank">Episode 4: Polly Parrot</a>
-    </div>
+    <h1>Episode 2: Mr Dinosaur is Lost</h1>
+    <video controls autoplay>
+        <source src="https://raw.githubusercontent.com/hssayc/repo/main/Peppa%20Pig%20Season%201%20Episode%202%20-%20Mr%20Dinosaur%20is%20Lost%20-%20Cartoons%20for%20Children%20(1080p%2C%20h264%2C%20youtube).mp4" type="video/mp4">
+        브라우저가 video 태그를 지원하지 않습니다.
+    </video>
     <div class="footer">
         for the World's Best Baby Yuchan
     </div>
